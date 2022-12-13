@@ -15,17 +15,18 @@ for (let i = 1; i <= 10; i++) {
     // chiedere all'utente 10 volte un numero
     const askNumber = parseInt(prompt('Scegli un numero?'));
     const numb = numbers[askNumber];
-    result = numb;
+    result = numbers.push(numb);
+
 
 
     // console.log(askNumber)
 }
 let total = '';
 
-for (let i = 1; i <= 10; i++) {
-    total = result[i];
+for (let i = 1; i < numbers.lenght; i++) {
+    total += result[i];
 }
 
 
-resultElement.innerText += total;
+resultElement.innerText = total;
 // 
