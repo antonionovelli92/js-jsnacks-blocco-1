@@ -8,17 +8,20 @@ const resultElement = document.getElementById('result');
 
 
 const numbers = [];
+let result = '';
 
 // creo un ciclo
 for (let i = 1; i <= 10; i++) {
     // chiedere all'utente 10 volte un numero
     const askNumber = parseInt(prompt('Scegli un numero?', 5));
-    numbers.push(askNumber);
+    result = askNumber;
+    numbers.unshift(askNumber);
 }
 let total = '';
 for (let i = 1; i < numbers.length; i++) {
-    total += numbers[i];
+    result += numbers[i];
+    total = result;
 
 }
 
-resultElement.innerHTML += total;
+resultElement.innerText = total;
