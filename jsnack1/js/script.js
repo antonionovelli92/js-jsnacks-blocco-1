@@ -6,27 +6,19 @@ Il software deve chiedere per 10 volte all’utente di inserire un numero. (qui 
 // Prendo l'elemento dal dom
 const resultElement = document.getElementById('result');
 
-const numbers = [];
 
-let result = '';
+const numbers = [];
 
 // creo un ciclo
 for (let i = 1; i <= 10; i++) {
     // chiedere all'utente 10 volte un numero
-    const askNumber = parseInt(prompt('Scegli un numero?'));
-    const numb = numbers[askNumber];
-    result = numbers.push(numb);
-
-
-
-    // console.log(askNumber)
+    const askNumber = parseInt(prompt('Scegli un numero?', 5));
+    numbers.push(askNumber);
 }
 let total = '';
+for (let i = 1; i < numbers.length; i++) {
+    total += numbers[i];
 
-for (let i = 1; i < numbers.lenght; i++) {
-    total += result[i];
 }
 
-
-resultElement.innerText = total;
-// 
+resultElement.innerHTML += total;
