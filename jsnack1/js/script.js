@@ -21,7 +21,6 @@ let total = '';
 for (let i = 1; i < numbers.length; i++) {
     result += numbers[i];
     total = result;
-
 }
 
 resultElement.innerText = total;
