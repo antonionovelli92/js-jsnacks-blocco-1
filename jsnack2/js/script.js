@@ -33,20 +33,25 @@ button.addEventListener('click', function () {
     let isAllowed = false;
 
     // controlliamo se il nome è presente
-    for (let i = 0; i < allowedName.length; i++) {
+    for (let i = 0; i < allowedName.length && !isAllowed; i++) {
         // prendo il nome dall'array
         const currentName = allowedName[i];
         if (currentName === userName) {
             isAllowed = true;
+
         }
     }
-    if (isAllowed) {
-        result.innerText = 'Benvenuto alla festa';
-    } else {
-        result.innerText = 'Torna a casa, non sei il benvenuto';
-    }
 
 
+    // if (isAllowed) {
+    //     result.innerText = 'Benvenuto alla festa';
+    // } else {
+    //     result.innerText = 'Torna a casa, non sei il benvenuto';
+    // }
+
+
+    // alternativa con il ternario(nome costante= condizione ? se vero : se falso;)
+    result.innerText = isAllowed ? 'Benvenuto alla festa' : 'Torna a casa, non sei il benvenuto';
 
 
 })
