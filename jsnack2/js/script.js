@@ -6,4 +6,5 @@ In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby, l
 // Prendo l'elemento dal dom
 const resultElement = document.getElementById('result');
 
-
+// array
+const allowedName = ['Antonio', 'Marco', 'Pippo', 'Joker', 'Batman'];
